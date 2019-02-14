@@ -2,6 +2,13 @@
 
 ## E2E
 
+Test project
+
+To make sure everything works in this initial repo:
+
+* clone
+* do `npm install` in root of this repo
+
 For tests development use two terminals, example:
  * One is for webdriver-manager to start `webdriver-manager start`
  * Another for running tests `npm test`
