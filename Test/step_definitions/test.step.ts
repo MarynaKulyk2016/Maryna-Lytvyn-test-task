@@ -12,6 +12,11 @@ Given(/^I fill in the name input$/, async () => {
     await computersPage.typeNameInput('Test computer');
 });
 
+Given(/^I fill in the name input with new name$/, async () => {
+    await computersPage.nameInput.clear();
+    await computersPage.typeNameInput('Test computer edited');
+});
+
 Given(/^I fill in the introduced date input$/, async () => {
     await computersPage.typeIntroDateInput('2012-04-08');
 });
@@ -30,6 +35,10 @@ Given(/^I click Save button$/, async () => {
 
 Given(/^I should see success message$/, async () => {
     await computersPage.seeSuccessMessage();
+});
+
+Given(/^I should see success edit message$/, async () => {
+    await computersPage.seeEditedSuccessMessage();
 });
 
 Given(/^I fill in the search field$/, async () => {

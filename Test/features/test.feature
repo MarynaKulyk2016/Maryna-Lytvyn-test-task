@@ -19,7 +19,16 @@ Feature: Test task
     And I click filter button
     Then I see added computer item
 
-  Scenario: User should be able to delete computer TC-3
+  Scenario: User should be able to edit computer TC-3
+    Given I fill in the search field
+    And I click filter button
+    Then I see added computer item
+    And I click first computer name
+    And I fill in the name input with new name
+    And I click Save button
+    Then I should see success edit message
+
+  Scenario: User should be able to delete computer TC-4
     Given I fill in the search field
     And I click filter button
     And I click first computer name
@@ -27,4 +36,3 @@ Feature: Test task
     Then I fill in the search field
     And I click filter button
     And I see empty search result
-    And I wait 3000 milliseconds

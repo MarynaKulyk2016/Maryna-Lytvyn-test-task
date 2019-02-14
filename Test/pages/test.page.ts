@@ -72,6 +72,13 @@ export class ComputersPage extends BasePage {
         await this.waitForElementContainText(this.successMessage, 'Done!')
     }
 
+    async seeEditedSuccessMessage() {
+        await this.waitForVisibilityElement(this.successMessage);
+        await this.waitForElementContainText(this.successMessage, 'has been updated')
+    }
+
+
+
     async typeSearchInput(name: string) {
         await this.waitForVisibilityElement(this.searchInput);
         await this.searchInput.sendKeys(name);
