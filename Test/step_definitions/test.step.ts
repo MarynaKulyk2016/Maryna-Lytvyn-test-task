@@ -13,7 +13,6 @@ Given(/^I fill in the name input$/, async () => {
 });
 
 Given(/^I fill in the name input with new name$/, async () => {
-    await computersPage.nameInput.clear();
     await computersPage.typeNameInput('Test computer edited');
 });
 

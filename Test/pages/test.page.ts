@@ -43,6 +43,7 @@ export class ComputersPage extends BasePage {
 
     async typeNameInput(name: string) {
         await this.waitForVisibilityElement(this.nameInput);
+        await this.nameInput.clear();
         await this.nameInput.sendKeys(name);
     }
 
@@ -76,8 +77,6 @@ export class ComputersPage extends BasePage {
         await this.waitForVisibilityElement(this.successMessage);
         await this.waitForElementContainText(this.successMessage, 'has been updated')
     }
-
-
 
     async typeSearchInput(name: string) {
         await this.waitForVisibilityElement(this.searchInput);
