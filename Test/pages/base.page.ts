@@ -30,4 +30,19 @@ export class BasePage {
     ) {
         await browser.wait(ExpectedConditions.visibilityOf(element), timeout, messageError);
     }
+
+    /**
+     * @description Wait for invisibility element.
+     *
+     * @param {ElementFinder} element
+     * @param {string} [messageError=Error: Found element]
+     * @param {number} [timeout=5000]
+     */
+    async waitForInvisibilityElement(
+        element: ElementFinder,
+        messageError: string = 'Error: Found element',
+        timeout: number = TIMEOUT
+    ) {
+        await browser.wait(ExpectedConditions.invisibilityOf(element), timeout, messageError);
+    }
 }

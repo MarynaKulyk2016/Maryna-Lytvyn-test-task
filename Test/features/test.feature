@@ -17,10 +17,14 @@ Feature: Test task
   Scenario: User should be able to find computer TC-2
     Given I fill in the search field
     And I click filter button
+    Then I see added computer item
 
   Scenario: User should be able to delete computer TC-3
     Given I fill in the search field
     And I click filter button
     And I click first computer name
     And I click delete button
+    Then I fill in the search field
+    And I click filter button
+    And I see empty search result
     And I wait 3000 milliseconds

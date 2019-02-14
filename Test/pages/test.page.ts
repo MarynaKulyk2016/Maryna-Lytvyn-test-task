@@ -95,4 +95,9 @@ export class ComputersPage extends BasePage {
         await this.deleteBtn.click();
         await this.waitForElementContainText(this.successMessage, 'Done! Computer has been deleted');
     }
+
+    async seeEmptySearchResult() {
+        await this.waitForInvisibilityElement(this.firstComputerName);
+        await this.waitForElementContainText(this.pageTitle, 'No computers found')
+    }
 }

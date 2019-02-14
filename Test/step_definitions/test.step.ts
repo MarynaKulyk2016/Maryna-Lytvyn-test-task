@@ -38,7 +38,14 @@ Given(/^I fill in the search field$/, async () => {
 
 Given(/^I click filter button$/, async () => {
     await computersPage.clickFilterButton();
+});
+
+Given(/^I see added computer item$/, async () => {
     await computersPage.seeAddedComputerName();
+});
+
+Given(/^I see empty search result$/, async () => {
+    await computersPage.seeEmptySearchResult();
 });
 
 Given(/^I click first computer name$/, async () => {
