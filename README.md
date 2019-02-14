@@ -20,3 +20,5 @@ HTML report link is generated after each test execution:
 
 * Copy the link from terminal and open it in any browser
 
+### Test cases can be found by this link:
+`https://docs.google.com/spreadsheets/d/1vNlB_uqyA6YWe1A8728pG000-9-65GXsi8Qx1LeuOL8/edit?usp=sharing`
